@@ -34,6 +34,7 @@
   var comm = new EventEmitter();
 
   var logEl = $('#log')[0];
+  comm.autoConnect = true;
   comm.maxLogLevel = ALL;
   comm.logFilter = null;
   comm.reconnectDelay = 3000;
@@ -112,7 +113,7 @@
     $('#connect-disconnect').removeAttr('disabled');
 
     // auto connect
-    if (!$('#connect-disconnect').hasClass('active')) {
+    if (comm.autoConnect) {
       $('#connect-disconnect').trigger('click');
     }
   });
@@ -127,6 +128,7 @@
         comm.dispatch('log', rec);
       });
     } else {
+      comm.autoConnect = false;
       $('.status-text')
         .addClass('error')
         .html('Error: ' + result.error || 'Unknown server error');
@@ -265,11 +267,13 @@
       }
 
       comm.status = STATUS_AUTHENTICATING;
+      comm.autoConnect = true;
 
     } else {
       $('.auth-panel').removeClass('shown');
       $(this).removeClass('active');
       comm.reconnectDelay = 1000;
+      comm.autoConnect = false;
       comm.disconnect();
       $('.status-text').html('Disconnecting...');
     }
@@ -297,6 +301,7 @@
     $('.auth-panel').removeClass('shown');
     $('#connect-disconnect').removeClass('active');
     comm.status = STATUS_READY;
+    comm.autoConnect = false;
   });
 
   $('.auth-panel').on('keypress', function (event) {
