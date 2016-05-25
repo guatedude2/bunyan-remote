@@ -1,0 +1,57 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <link rel='stylesheet' href='BunyanDevToolPanel.css'>
+</head>
+<body>
+  <main>
+    <header>
+
+      <div class="filter">
+        <input class="filter-input-field" type="text" placeholder="Filter" id="filter-input-field">
+      </div>
+
+      <div class="filter-bitset">
+        <li title="⌘ Click to select multiple types" class="all selected">All</li>
+        <div class="filter-bitset-divider"></div>
+        <li title="⌘ Click to select multiple types" class="error">Errors</li>
+        <li title="⌘ Click to select multiple types" class="warning">Warnings</li>
+        <li title="⌘ Click to select multiple types" class="info">Info</li>
+        <li title="⌘ Click to select multiple types" class="debug">Debug</li>
+        <li title="⌘ Click to select multiple types" class="trace">Trace</li>
+      </div>
+
+      <div class="status">
+        <span class="status-text not-found">Server not found</span>
+        <button id="connect-disconnect" class="connect-button icon-connect" disabled></button>
+        <!-- key based panel -->
+        <div class="auth-panel panel">
+          <div class="text field">TEXT</div>
+          <div class="field">
+            <input type="text" placeholder="" id="auth-input-key-user">
+          </div>
+          <div class="field">
+            <input type="password" placeholder="Password" id="auth-input-pass">
+          </div>
+          <div class="field">
+            <button class="validate">Validate</button>
+            <button class="cancel">Cancel</button>
+          </div>
+        </div>
+      </div>
+
+    </header>
+
+    <article id="log">
+    </article>
+
+  </main>
+  <script src="../vendor/events.js"></script>
+  <script src="../vendor/ymnnjq.js"></script>
+  <script src="../vendor/socket.io-1.4.5.js"></script>
+  <script src="BunyanDevToolPanel.js"></script>
+  <script src="BunyanLogger.js"></script>
+
+</body>
+</html>
+
