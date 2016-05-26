@@ -1,6 +1,6 @@
 {
   "name": "Bunyan Remote DevTool",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Remote logger developer tool for Node.js bunyan with bunyan-remote-stream.",
   "devtools_page": "chrome-bunyan-devtool.html",
   "manifest_version": 2,

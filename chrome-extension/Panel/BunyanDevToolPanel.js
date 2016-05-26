@@ -1,7 +1,7 @@
 /* global chrome document $ io EventEmitter BunyanLogger */
 (function() {
   var VERSION_MIN = '0.0.1';
-  var VERSION_MAX = '0.0.1';
+  var VERSION_MAX = '0.1.0';
   var PORT = 3232;
 
   var AUTH_NONE = 0;
