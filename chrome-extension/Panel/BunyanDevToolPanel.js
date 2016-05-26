@@ -64,7 +64,7 @@
     return (comm.maxLogLevel === ALL || (level & comm.maxLogLevel) === level) && match;
   }
 
-  function versionValid(current, max, min) {
+  function versionValid(current, min, max) {
     current = current.split('.').reduce(function(r, v, i) { return r + (v * Math.pow(1000, 2 - i)); }, 0);
     min = min.split('.').reduce(function(r, v, i) { return r + (v * Math.pow(1000, 2 - i)); }, 0);
     max = max.split('.').reduce(function(r, v, i) { return r + (v * Math.pow(1000, 2 - i)); }, 0);
