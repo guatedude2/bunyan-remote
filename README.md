@@ -1,8 +1,11 @@
 # bunyan-remote
 
+[![Build Status](https://travis-ci.org/guatedude2/bunyan-remote.svg?branch=master)](https://travis-ci.org/guatedude2/bunyan-remote)
+
 Remote logger for node-bunyan that logs to the browser via Bunyan DevTools
 
 ![Bunyan Logo](https://raw.githubusercontent.com/guatedude2/bunyan-remote/master/chrome-extension/images/icon128.png)
+
 
 **Note: this modules is still in beta version**
 
