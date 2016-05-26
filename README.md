@@ -122,7 +122,7 @@ tweetybird:puttytat12
 
 The *Bunyan Remote DevTool* Chrome Extension can be downloaded via the [Chrome Web Store](https://chrome.google.com/webstore/detail/bunyan-remote-devtool/njijbgiagjigbbdickepciiejglbcein)
 
-![Bunyan Remote DevTool](https://raw.githubusercontent.com/guatedude2/bunyan-remote/master/logo/screenshot.png)
+![Bunyan Remote DevTool](https://raw.githubusercontent.com/guatedude2/bunyan-remote/master/logo/screenshot.jpg)
 
 ## License
 
