@@ -14,22 +14,22 @@ describe('client-array', function () {
     clientArray.push(fixtures.clientA);
   });
 
-  it('inherits Array class', function () {
+  it('should inherit Array class', function () {
     expect(clientArray instanceof Array).to.be.true;
     expect(clientArray instanceof ClientArray).to.be.true;
   });
 
-  it('`indexOf` finds a client based on id', function () {
+  it('`indexOf` should find a client based on id', function () {
     expect(clientArray.indexOf('ABC')).to.be.gt(-1);
     expect(clientArray.indexOf('DEF')).to.be.equal(-1);
   });
 
-  it('`add` adds a client to the client array', function () {
+  it('`add` should add a client to the client array', function () {
     expect(clientArray.add(fixtures.clientB)).to.be.true;
     expect(clientArray.indexOf('DEF')).to.be.gt(-1);
   });
 
-  it('`add` ignores a client if a client with the same id exsits', function () {
+  it('`add` should ignore a client if a client with the same id exsits', function () {
     expect(clientArray.add(fixtures.clientB)).to.be.true;
     expect(clientArray.indexOf('DEF')).to.be.gt(-1);
     expect(clientArray.length).to.be.equal(2);
@@ -37,7 +37,7 @@ describe('client-array', function () {
     expect(clientArray.length).to.be.equal(2);
   });
 
-  it('`remove` removes a client if the id exsits in the array', function () {
+  it('`remove` should remove a client if the id exsits in the array', function () {
     clientArray.add(fixtures.clientB);
     expect(clientArray.indexOf('DEF')).to.be.gt(-1);
     expect(clientArray.length).to.be.equal(2);
@@ -47,7 +47,7 @@ describe('client-array', function () {
     expect(clientArray.length).to.be.equal(1);
   });
 
-  it('`emit` triggers the emit event on all client in the client array', function () {
+  it('`emit` should trigger the emit event on all client in the client array', function () {
     fixtures.clientA.emit = sinon.stub();
     fixtures.clientB.emit = sinon.stub();
     clientArray.add(fixtures.clientB);

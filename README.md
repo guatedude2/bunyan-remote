@@ -1,5 +1,6 @@
 # bunyan-remote
 
+[![npm version](https://badge.fury.io/js/bunyan-remote.svg)](https://badge.fury.io/js/bunyan-remote)
 [![Build Status](https://travis-ci.org/guatedude2/bunyan-remote.svg?branch=master)](https://travis-ci.org/guatedude2/bunyan-remote)
 
 Remote logger for node-bunyan that logs to the browser via Bunyan DevTools
@@ -36,13 +37,21 @@ logger.info('Start server...');
 
 bunyan-remote can be used with the following optional properties:
 
-* __`allowedIPs`__: An array of IP expressions where "*" signifys any (e.g 10.* - all IP's that start with 10.X.X.X)
+* __`port`__: The port number that bunyan-remote will use for it's internal [http.Server](https://nodejs.org/api/http.html#http_class_http_server) instance.
+* __`server`__: A custom instance of [http.Server](https://nodejs.org/api/http.html#http_class_http_server) to user instead of the bunyan-remote's internal server.
+* __`allowedIPs`__: An array of IP expressions that bunyan-remote will allow connections from. The `*` signifys any character (e.g `10.0.*` will allow all IP's in the `10.0.X.X` range)
 * __`auth`__: One of the following options:
   * __`remoteBunyan.AUTH_NONE`__: No authentication required by Bunyan Remote DevTool.
   * __`remoteBunyan.AUTH_KEY`__: Prompt Bunyan Remote DevTool for a key.
   * __`remoteBunyan.AUTH_USER`__: Prompt Bunyan Remote DevTool for a username and password.
-* __`authenticate`__: A string, or a function which verifies the authentcation of the client.
+* __`authenticate`__: A string, or a function which verifies the authentcation of the client. See [Authentication](#Authentication)
 
+
+## Methods
+
+#### `BunyanRemote : BunyanRemote.attach(http.Server)`
+
+Attaches an existing [http.Server](https://nodejs.org/api/http.html#http_class_http_server) instance to bunyan-remote.
 
 ## Authentication
 
