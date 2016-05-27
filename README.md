@@ -136,6 +136,10 @@ The *Bunyan Remote DevTool* Chrome Extension can be downloaded via the [Chrome W
 
 ![Bunyan Remote DevTool](https://raw.githubusercontent.com/guatedude2/bunyan-remote/master/logo/screenshot.jpg)
 
+## Change Log
+
+Read (CHANGELOG.md)[]
+
 ## License
 
 The MIT License (MIT)
