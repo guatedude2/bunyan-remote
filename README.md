@@ -138,7 +138,7 @@ The *Bunyan Remote DevTool* Chrome Extension can be downloaded via the [Chrome W
 
 ## Change Log
 
-Read (CHANGELOG.md)[]
+See [CHANGELOG.md](https://github.com/guatedude2/bunyan-remote/blob/master/CHANGELOG.md)
 
 ## License
 
