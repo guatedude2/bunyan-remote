@@ -1,6 +1,6 @@
 {
   "name": "bunyan-remote",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Remote logger for node-bunyan that logs to the browser via Bunyan DevTools",
   "main": "index.js",
   "scripts": {
